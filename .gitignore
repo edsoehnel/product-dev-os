@@ -1,0 +1,30 @@
+# Secrets
+*.key
+*.pem
+*.env
+.env*
+.secrets/
+credentials.txt
+.ssh/
+
+# OS
+Thumbs.db
+.DS_Store
+ConsoleHost_history.txt
+
+# IDE
+.vscode/
+
+# Temporary
+*.log
+*.tmp
+*.bak
+*.old
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Node
+node_modules/
