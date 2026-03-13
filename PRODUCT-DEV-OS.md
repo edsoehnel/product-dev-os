@@ -48,8 +48,8 @@ build-plan.md \- sequences, tasks, modules, dependencies, components
 decisions.md \ why we did what we did, why we chose A over B, etc.  Architecture Decision Records (ADR). provide context, decision, risks, consequences. Document using the [decision layer and biases layer](https://docs.google.com/document/d/1VjtP-jPn-wOpE8z5QSVOdk-pPxneyuDDM6z_a9OIpYY/edit?tab=t.0)
 system.md \ map of how the knowledge layer connects to the code, how data flows, how AI should reason about the repo
 
-### src/
-*The production/execution layer for AI to execute on. Code is created in files.  Code is well documented and explains why the code exists, what it does, maintenance tips, gotchas if any*
+### srv/
+*The production/execution layer for AI to execute on. Code is created in files.  Code is well documented and explains why the code exists, what it does, maintenance tips, gotchas if any.*
 app/
 models/
 scripts/
