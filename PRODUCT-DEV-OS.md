@@ -22,10 +22,15 @@ The most valuable stack is:
 2. Product layer → takes the knowledge layer and executes it:  develop code, develop the product, produce the product  
 3. Data layer → what the system observes, stores, and learns from based on production. The data validates reality, that leads to iterate above to improve
 
-# ## Structure For Git Repo
+### Structure For Git Repo
 
-Changes and commits always tracked. 
-Branch strategy:  main (production), dev (active development), feature branches (experimental). Flow: feature>>dev>>main 
+- Changes and commits always tracked. 
+- Branch strategy:  main (production), dev (active development), feature branches (experimental). Flow: feature>>dev>>main 
+
+### Structure For Files
+
+- Use consistent headings
+- Keep sections predictable.  If every file has a predictable structure, AI navigation improves dramatically.
 
 ### repo/
 
