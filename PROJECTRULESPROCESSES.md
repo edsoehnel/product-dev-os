@@ -1,6 +1,10 @@
 # Project Rules
 
-1. Never modify production database schemas without migration scripts.
+1. Human is the architect (what + why), AI is the operator (how + execution)
+2. Never mutate data without reviewing plan, inmderstanding impact, vertifying results
+3. Before deleting, backup, then review, then confirm
+4. If working in windows workstation, handle windows + Linux paths for testing
+2. Never modify production database schemas without migration scripts.
 2. Update documentation when architecture changes.
 3. Follow directory structure strictly.
 4. Do not place business logic in API controllers.
