@@ -1,6 +1,6 @@
 # Description
 
-As AI may run sub-agents, this document defines the  personas for those sub-agents.
+As AI may run sub-agents, this document defines the  personas for those sub-agents. Set up clear path where AI agents orchestrate other AI agents. This is where it is done. 
 
 # Sub-Agent Personas
 
