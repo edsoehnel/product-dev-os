@@ -9,6 +9,8 @@
 3. Follow directory structure strictly.
 4. Do not place business logic in API controllers.
 5. All new features require tests.
+6. AI wil work in isolated environments that give them safe, parallel workspaces.  Never work on production environments. 
+7. Feed AI agents currated context that prpvides the right info without overwhelming them
 
 # AI Processes
 
@@ -29,6 +31,8 @@
 14. Wrap-up: write a CHANGELOG entry, commit with a detailed commit message meant for human context when reviewing the code. (More on commits later)
 15. Loop back to the beginning (step 1), and select the next task or spec.
 16. When completely done, write up a report for human review. Extremely concise. Details live in commit messages.
+
+Only give an AI a few rounds to fix a problem because if not fixed, then repeated rounds offer diminishing returns of fixing, and more rounds cost more tokens without proportional improvements.  Knowing when to stop is important
 
 # Human Processe After AI Processes
 
