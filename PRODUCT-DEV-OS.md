@@ -16,6 +16,7 @@ I organize the layers according to the 8 core functional areas of a business, [a
 
 * If humans need to think through it → Google Docs to allow for shared working  
 * If AI needs to read it to build something → Markdown in a repo
+* You want to map strategy >>> structured specs >>> agent execution.  Strategy is business realm (problem you solve, differertiators, moats, growth strategy), which gets turned into structures specs that AI agents use to build the product to satisfy the strategy.
 
 The most valuable stack is:
 
