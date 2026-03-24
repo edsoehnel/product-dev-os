@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Graph</title>
+
+  <script src="https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js"></script>
+
+  <style>
+    :root {
+      --bg: #f4efe7;
+      --panel: rgba(255, 255, 255, 0.88);
+      --ink: #14213d;
+      --muted: #5b6475;
+      --line: rgba(20, 33, 61, 0.12);
+      --ui: #2563eb;
+      --script: #0f766e;
+      --data: #a16207;
+      --returns: #7c3aed;
+      --navigates: #db2777;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.14), transparent 28%),
+        radial-gradient(circle at top right, rgba(15, 118, 110, 0.14), transparent 26%),
+        linear-gradient(180deg, #f8f5ef 0%, var(--bg) 100%);
+    }
+
+    .page {
+      width: min(1400px, calc(100vw - 32px));
+      margin: 20px auto;
+      display: grid;
+      gap: 16px;
+    }
+
+    .hero {
+      display: grid;
+      gap: 10px;
+      padding: 20px 24px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 16px 42px rgba(20, 33, 61, 0.08);
+    }
+
+    .eyebrow {
+      margin: 0;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1;
+    }
+
+    .subtitle {
+      margin: 0;
+      max-width: 900px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .swatch {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: currentColor;
+      box-shadow: inset 0 0 0 1px rgba(20, 33, 61, 0.15);
+    }
+
+    .graph-shell {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 20px 48px rgba(20, 33, 61, 0.08);
+    }
+
+    #cy {
+      width: 100%;
+      height: 76vh;
+      min-height: 620px;
+      border-radius: 18px;
+      border: 1px solid rgba(20, 33, 61, 0.08);
+      background:
+        linear-gradient(rgba(20, 33, 61, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20, 33, 61, 0.04) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.96));
+      background-size: 32px 32px, 32px 32px, auto;
+      overflow: hidden;
+    }
+
+    @media (max-width: 800px) {
+      .page {
+        width: min(100vw - 16px, 1400px);
+        margin: 8px auto 16px;
+      }
+
+      .hero,
+      .graph-shell {
+        padding: 14px;
+        border-radius: 18px;
+      }
+
+      #cy {
+        height: 72vh;
+        min-height: 520px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">System Graph</p>
+      <h1>Login Flow Map</h1>
+      <p class="subtitle">Cytoscape view of the login-side app graph, showing browser UI, scripts, datastores, and the relationships between them.</p>
+      <div class="legend" aria-label="Graph legend">
+        <span class="chip"><span class="swatch" style="color: var(--ui);"></span>UI node</span>
+        <span class="chip"><span class="swatch" style="color: var(--script);"></span>Script node</span>
+        <span class="chip"><span class="swatch" style="color: var(--data);"></span>Datastore node</span>
+        <span class="chip"><span class="swatch" style="color: var(--returns);"></span>Return edge</span>
+        <span class="chip"><span class="swatch" style="color: var(--navigates);"></span>Navigation edge</span>
+      </div>
+    </section>
+
+    <section class="graph-shell">
+      <div id="cy"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

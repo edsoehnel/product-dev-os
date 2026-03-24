@@ -1,0 +1,28 @@
+module,sub-module,active,node-id,code-base,type,retry-policy-indempotent,logging,metrics,execution-environment,vm-environment,owner,from-node-to-node,edge-type,entity,execution,schedule,state-transition,dependencies,observability-hooks,criticality
+customer-db,login,prod,file:login.js,html,UI,yes,yes,,browser/client,lod-dev-app,system,file:login.js,calls,attachment file,user,1-minute,auth dependency loaded,file:login.js,logs,low
+,customers,dev,file:login.html,js,Script,no,no,,backend/vm,lod-prod-app,ingestion-agent,file:login.html,reads,attachment record,event,3-minutes,authenticated,file:login.html,metrics,medium
+,,ideation,login API,py,Datastore,,print-based,,infrastructure,,inference-agent,login API,writes,auth token,cron,5-minutes,authorized,login API,alerts,high
+,,archived,auth system,.env,Cron,,,,,,,auth system,triggers,chunk,manual,manual,chunked,auth system,,
+,,,environment config,browser DOM (in memory),Template,,,,,,,environment config,validates,credentials,,on change,config loaded,environment config,,
+,,,localStorage ,,API,,,,,,,localStorage ,transforms,customer index,,on load/reload,customer created/updated/deleted,localStorage ,,
+,,,file:dashboard.html,,Schema,,,,,,,file:dashboard.html,queues,customer json,,on login,customer loaded,file:dashboard.html,,
+,,,DOM (#msg),,External,,,,,,,DOM (#msg),depends_on,customer record,,on mutation,customer loaded/saved,DOM (#msg),,
+,,,file:auth.py,,Service,,,,,,,file:auth.py,returns,dog index,,on request,dog index built,file:auth.py,,
+,,,file:customer.py,,Config,,,,,,,file:customer.py,navigates,error message,,on submit,error,file:customer.py,,
+,,,file:customers_index.py,,,,,,,,,file:customers_index.py,imports,PID,,on upload,file persisted/json updated,file:customers_index.py,,
+,,,file:dogs.py,,,,,,,,,file:dogs.py,,session,,on upload,index built,file:dogs.py,,
+,,,file:upload.py,,,,,,,,,file:upload.py,,token,,on upload,index rebuild callable,file:upload.py,,
+,,,file:validators.py,,,,,,,,,file:validators.py,,user,,on upload,indexed,file:validators.py,,
+,,,file:main.py,,,,,,,,,file:main.py,,validation rules,,,inferred,file:main.py,,
+,,,file:requirements.txt,,,,,,,,,file:requirements.txt,,validator request,,,rules dependency loaded,file:requirements.txt,,
+,,,.venv,,,,,,,,,.venv,,,,,rules returned,.venv,,
+,,,_pycache_,,,,,,,,,_pycache_,,,,,storage dependency loaded,_pycache_,,
+,,,file:storage.py,,,,,,,,,file:storage.py,,,,,submitted,file:storage.py,,
+,,,file:validate.py,,,,,,,,,file:validate.py,,,,,validated,file:validate.py,,
+,,,file:validators_config.py,,,,,,,,,file:validators_config.py,,,,,validated,file:validators_config.py,,
+,,,file:add_customer.js,,,,,,,,,file:add_customer.js,,,,,validation dependency loaded,file:add_customer.js,,
+,,,file:app.js,,,,,,,,,file:app.js,,,,,,file:app.js,,
+,,,file:dogs.html,,,,,,,,,file:dogs.html,,,,,,file:dogs.html,,
+,,,file:dogs.js,,,,,,,,,file:dogs.js,,,,,,file:dogs.js,,
+,,,file:edit_customer.html,,,,,,,,,file:edit_customer.html,,,,,,file:edit_customer.html,,
+,,,file:validators-ui.js,,,,,,,,,file:validators-ui.js,,,,,,file:validators-ui.js,,
