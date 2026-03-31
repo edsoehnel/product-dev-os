@@ -5,7 +5,7 @@ To understand the general process for this repo, please review the PRODUCT-DEV-O
 
 # This Document
 
-Functionas more like a router, telling AI where to find stuff.
+Functions more like a router, telling AI where to find stuff.
 
 # This Repo
 

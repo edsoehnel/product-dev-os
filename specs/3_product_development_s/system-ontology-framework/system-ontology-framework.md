@@ -1,3 +1,6 @@
+# Overview
+A framework that defines a system ontology approach where a complex software system is modeled as a structured graph (nodes and relationships) that serves as the single source of truth—allowing AI to automatically generate diagrams, detect issues, simulate changes, and even build code. It’s important because it transforms system design from static documentation into a machine-readable, AI-operable model, enabling automation, consistency, and far more intelligent development and scaling of software systems.
+
 # C4 Model (industry standard)
 
 1. Context (system in the world)
@@ -13,7 +16,7 @@
 
 ### spreadsheet (System catalog / service registry / data dictionary hybrid)
 
-As youi build the system and its files and components, you create a machine-readable system graph that is a declarative system model where everything is described, and everything else is derived from it:
+As you build the system and its files and components, you create a machine-readable system graph that is a declarative system model where everything is described, and everything else is derived from it:
 - diagrams
 - monitoring
 - orchestration
