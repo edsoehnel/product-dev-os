@@ -2,15 +2,15 @@
 
 ## Overview
 
-This repository represents an entirely new way for me personally to develop products (physical and digital) and as such, is constantly being added to and refined.  I am doing this because of AI, which is becoming a critical partner in how I develop products.  Because of this new partner, I am having to completely redesign how I go about developing not just new products/services, but new businesses.  
+This repository is a spec-driven, AI-native product development operating system where structured Markdown (knowledge layer) defines the system, AI agents execute against it to generate and run the product (execution layer), and data feeds back to continuously improve it—making the repository itself an executable blueprint for both digital and physical product creation.
 
-This repository is a template that will be copied when a new product is to be created.  
+It represents a new methodology for creating products and services as AI becomes the primary execution and production layer. AI is no longer limited to writing code; it is increasingly capable of conducting research, running tests, generating new materials, prototyping products, and operating automated production systems. As a result, new paradigms are emerging for how we communicate intent to AI. This product development OS is my approach to structuring that communication—translating strategy into executable specifications that AI can reliably interpret and act upon.
 
-This template is to be used when an AI is involved because this document helps provide executable structure that an AI can understand to create the product and manage its production.  
+This repository serves as a reusable template that is copied each time a new product is created. It provides the structured, executable framework required for AI to understand, build, and manage the product and its production lifecycle. As the system evolves, I continuously refine and expand this repository to improve how effectively AI can operate within it.
 
-A change to the product would mean changing the executable structure, not the actual code or the product itself, because AI is the product development and production layer and uses the executable structure layer to produce.  
+In this model, changes to a product are made by updating the executable structure—not manually modifying code or production systems directly. The knowledge layer defines the desired state, and AI acts as the development and production engine that implements those changes.
 
-This template guides how to create the product, how to produce it, and improve it.  This process is not just for software products, but also for physical products, because increasingly, AI will assume control of physical production of products via automated test and assembly lines.
+This framework guides the full lifecycle: how to define a product, how to build it, how to produce it, and how to continuously improve it through feedback from real-world data. While immediately applicable to software, it is equally designed for physical products, as AI increasingly integrates with automated testing, prototyping, and manufacturing systems.
 
 I organize the layers according to the 8 core functional areas of a business that I created, [as defined here](https://eddiesoehnel.com/startup-roadmap/).
 
@@ -69,7 +69,7 @@ The most valuable stack is:
 - data-model.md \- how the data flows through the product, where it ends up, how it is , structure, relationships, rules governing it, where stored
 - environments.md - multiple environments that exist - dev, staging, production
 - system.md \ map of how the knowledge layer connects to the code, how data flows, how AI should reason about the repo
-- ####### config/
+- config/
 - - .env files, API's, feature flags, for both dev and production
  
 ###### 3_product_development_s
