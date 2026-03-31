@@ -12,7 +12,7 @@ A change to the product would mean changing the executable structure, not the ac
 
 This template guides how to create the product, how to produce it, and improve it.  This process is not just for software products, but also for physical products, because increasingly, AI will assume control of physical production of products via automated test and assembly lines.
 
-I organize the layers according to the 8 core functional areas of a business, [as defined here](https://eddiesoehnel.com/startup-roadmap/).
+I organize the layers according to the 8 core functional areas of a business that I created, [as defined here](https://eddiesoehnel.com/startup-roadmap/).
 
 ### Tools:
 
