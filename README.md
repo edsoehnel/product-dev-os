@@ -60,7 +60,7 @@ The most valuable stack is:
 
 ###### 1_strategy_s
 
-- vision/concept validation/strategy/mission/goals/marketing/sales/distribution/goals/target customer/constraints/success metrics/.md \ use the **B2C framework**.
+- vision/concept validation/strategy/mission/goals/marketing/sales/distribution/goals/target customer/constraints/success metrics/.md \ use the **B2C framework**.  
 
 ###### 2_systems_s
 
