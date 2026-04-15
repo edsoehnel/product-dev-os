@@ -8,7 +8,9 @@ It represents a new methodology for creating products and services as AI becomes
 
 This repository serves as a reusable template that is copied each time a new product is created. It provides the structured, executable framework required for AI to understand, build, and manage the product and its production lifecycle. As the system evolves, I continuously refine and expand this repository to improve how effectively AI can operate within it.
 
-In this model, changes to a product are made by updating the executable structure—not manually modifying code or production systems directly. The knowledge layer defines the desired state, and AI acts as the development and production engine that implements those changes.
+But it is not just for products.  My thoughts are to have a template that is applicable for anything, from starting a business, designing new products, launnching them, and creating AI agents and workflows.  
+
+In this model, changes to something (company, product, service, workflow, prcess) are made by updating the executable structure—not manually modifying code or production systems directly. The knowledge layer defines the desired state, and AI acts as the development and production engine that implements those changes.
 
 This framework guides the full lifecycle: how to define a product, how to build it, how to produce it, and how to continuously improve it through feedback from real-world data. While immediately applicable to software, it is equally designed for physical products, as AI increasingly integrates with automated testing, prototyping, and manufacturing systems.
 
@@ -29,9 +31,12 @@ The most valuable stack is:
 
 ### 3-layer system
 
-1. Knowledge layer (specs/)   → what the system is supposed to do. The truth via highly structured executable knowledge that AI can understand. Structure leads to intelligence.  Smarter AI models help, but if poorly structured, then failure.  Well structure knowledger layers can succeed even with average models. 
+1. Knowledge layer (specs/)   → what the system is supposed to do and how to do it. The truth via highly structured executable knowledge that AI can understand. Structure leads to intelligence.  Smarter AI models help, but if poorly structured, then failure.  Well structure knowledger layers can succeed even with average models. 
+2. Harness layer (harness/)   → the program that runs the AI.  It does four things: runs the model in a loop, reads (specs/, tasks/, data-ops/), writes files (srv/), manages context (specs/), and enforces safety. That's it. It is "thin", very tightly scoped to a specific task.
 2. Product layer (tasks/ and srv/) → takes the knowledge layer and executes it:  develop code, develop the product, produce the product.
 3. Data layer (data/) → what the system observes, stores, and learns from based on production. The data validates reality, that leads to iterate above to improve.
+
+Intelligence is in specs/ (skills docs). Execution is in the srv/, and execution is deterministic. Deterministic is code calls, code execution, cron jobs.  It just does, but does not think.  
 
 ### Structure For Git Repo
 
@@ -54,9 +59,11 @@ The most valuable stack is:
 
 *The executable structure layer, organized by main function and in order*
 
-- agents.md \ Functionas more like a router, telling AI where to find stuff. General rules. Set up clear path where AI agents orchestrate other AI agents
+- agents.md \ Functionas more like a router, telling AI where to find stuff. General rules. Set up clear path where AI agents orchestrate other AI agents. When typx X task appears, load document y first. You are pointing to documents that get loaded at the right time.  You do not put all of this into one document.  Keep context tight.  
+- skill.md \ teaches model how to do something; supplies the process for doing something; 
 - decisions.md \ why we did what we did, why we chose A over B, etc.  Architecture Decision Records (ADR). provide context, decision, risks, consequences. Document using the [decision layer and biases layer](https://docs.google.com/document/d/1VjtP-jPn-wOpE8z5QSVOdk-pPxneyuDDM6z_a9OIpYY/edit?tab=t.0)
-- personas.md \ As AI may run sub-agents, this document defines the  personas for those sub-agents.
+- soul or personas.md \ who the agent is.  As it may run sub-agents, this document defines the  personas for those sub-agents.
+- there could be many versions of these spec files in each spec folder area.  
 
 ###### 1_strategy_s
 
