@@ -1,5 +1,7 @@
 # Project Rules
 
+Dump in rules that I come across - could be anything, specific or general.  
+
 1. Human is the architect (what + why), AI is the operator (how + execution)
 2. In planning phase of projects, the goal is to implement solutions that scale, that fit well int he bigger picture, are easy to maintain, and respect good software engineering paradigms.  AI agents are to think like a founder, not a part-time engineer. Model this expression:  Prototype for 1X; Build for 10X; Engineer for 100X.
 3. Break down projects and problems into many different sub-tasks that you can put a box around.  Think components that are connected together once, not overly interconnected systems with functions consolidated into same script files.  THink folders for components and putting them into discrete folders.  Big sytems are daunting, but not if you break them down into discrete components that also means discrete tasks to work on them.  THe bigger the component or task, the more context memory is needed, which creates problems.  Respect and be good to AI agents by keeping context and memory as small as possible.

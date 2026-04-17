@@ -8,11 +8,11 @@ It represents a new methodology for creating products and services as AI becomes
 
 This repository serves as a reusable template that is copied each time a new product is created. It provides the structured, executable framework required for AI to understand, build, and manage the product and its production lifecycle. As the system evolves, I continuously refine and expand this repository to improve how effectively AI can operate within it.
 
-But it is not just for products.  My thoughts are to have a template that is applicable for anything, from starting a business, designing new products, launnching them, and creating AI agents and workflows.  
+But it is not just for products.  My thoughts are to have a template that is applicable for anything, from starting a business, designing new products, launching them, and creating AI agents and workflows aginst it all. What if I want to design an agent to remove, clean and reassemble a rear hub on my road bike? Use this process. Much of the future will be run by agents doing digital and physical tasks.  This OS is attempting to lay the groundwork for building agents to do things.  
 
-In this model, changes to something (company, product, service, workflow, prcess) are made by updating the executable structure—not manually modifying code or production systems directly. The knowledge layer defines the desired state, and AI acts as the development and production engine that implements those changes.
+In this model, changes to something (company, product, service, workflow, process) are made by updating the executable structure—not manually modifying code or production systems directly. The knowledge layer defines the desired state, and AI acts as the development and production engine that implements those changes.
 
-This framework guides the full lifecycle: how to define a product, how to build it, how to produce it, and how to continuously improve it through feedback from real-world data. While immediately applicable to software, it is equally designed for physical products, as AI increasingly integrates with automated testing, prototyping, and manufacturing systems.
+This framework guides the full lifecycle for starting a company and building products: how to define a product, how to build it, how to produce it, and how to continuously improve it through feedback from real-world data. While immediately applicable to software, it is equally designed for physical products, as AI increasingly integrates with automated testing, prototyping, and manufacturing systems.
 
 I organize the layers according to the 8 core functional areas of a business that I created, [as defined here](https://eddiesoehnel.com/startup-roadmap/).
 
@@ -29,26 +29,28 @@ The most valuable stack is:
 3. data modeling
 4. AI orchestration
 
-### 4-layer system
+### 3-layer system
 
-1. Knowledge layer (specs/) (skills)  → what the system is supposed to do and how to do it. The truth via highly structured executable knowledge that AI can understand. Structure leads to intelligence.  Smarter AI models help, but if poorly structured, then failure.  Well structure knowledger layers can succeed even with average models. 
-2. Harness layer (harness/)   → the program that runs the AI.  It does four things: runs the model in a loop, reads (specs/, tasks/, data-ops/), writes files (srv/), manages context (specs/), and enforces safety. That's it. It is "thin", very tightly scoped to a specific task. It sits between the srv/ and the AI.  It is what activates the AI to operate in the srv/.  Deterministic code still runs crons, acts based on conditions, executes if / then.  That still exists, but now we have added AI as intelligence, so it uses the harness to operate.  
+1. Knowledge layer (specs/)  → what the system is supposed to do and how to do it. The truth via highly structured executable knowledge that AI can understand. Structure leads to intelligence.  Smarter AI models help, but if poorly structured, then failure.  Well structure knowledger layers can succeed even with average models. 
 2. Product layer (tasks/ and srv/) → takes the knowledge layer and executes it:  develop code, develop the product, produce the product.
-3. Data layer (data/) → what the system observes, stores, and learns from based on production. The data validates reality, that leads to iterate above to improve.
+3. Data layer (data/) → what the system observes, stores, and learns from based on execution and real-world response (like from customers on product use, feedback, results, outcomes). The data validates reality, that leads to iterate above to improve.
 
 ### Intelligence Vs Code
-Intelligence is in specs/ (skills docs).
+Intelligence is in specs/.
 
 Execution is in the srv/, and execution is deterministic. Deterministic is code calls, code execution, cron jobs.  It just does, but does not think.  If the task is exact and repetable, use deterministic code.  
 
-If the task requires judgement or interpretation, then it is a skill. It use to be that we had to force everything into code - logic that was fuzzy, required interpretation and still terrible at intelligence.  Now, we can collapse that cognitive logic that was in a lot of code into skills.  LLMs introduce massive intelligence into the process that never existed.  So, now, we have code that executes and scales, but now we can layer on intelligence that we never had before.  
+If the task requires judgement or interpretation, then it is in specs/ (skill.md files to be exact). It use to be that we had to force everything into code - logic that was fuzzy, required interpretation and still terrible at intelligence.  Now, we can collapse that cognitive logic that was in a lot of code into skills.  LLMs introduce massive intelligence into the process that never existed.  So, now, we have code that executes and scales, but now we can layer on intelligence to do it for us, in place of us humans.  
 
-Instead of trying to encode complex reasoning in deterministic code (if/then logic), we move that reasoning into skills that guide the LLM. We keep all execution, control flow, and precision tasks in code, and only offload judgment and interpretation to the model. 
+Instead of trying to encode complex reasoning in deterministic code (if/then logic), we move that reasoning into spec/skills that guide the LLM. We keep all execution, control flow, and precision tasks in code, and only offload judgment and interpretation to the model. 
 
 Code scales execution and guarantees correctness. 
 
-Skills scale intelligence and adapt automatically as models improve. When the model improves, every skills improves automatically without changing the code. That is how we can get 10x-100x improvement from the same system, with an improved AI model.  
+Spec/Skills scale intelligence and adapt automatically as models improve. When the model improves, every skills improves automatically without changing the code. That is how we can get 10x-100x improvement from the same system, with an improved AI model.  
 
+### Modular
+
+Everything is modular, especially agents and code.  We create small modules of everything so that when a better one comes along (either we create it or an open source one comes along), we can swap it out of the system.  
 
 
 ### Structure For Git Repo
@@ -72,20 +74,9 @@ Skills scale intelligence and adapt automatically as models improve. When the mo
 
 *The executable structure layer, organized by main function and in order*
 
-- agents.md \ Functionas more like a router, telling AI where to find stuff. General rules. Set up clear path where AI agents orchestrate other AI agents. When typx X task appears, load document y first. You are pointing to documents that get loaded at the right time.  You do not put all of this into one document.  Keep context tight.  Think of this as an organization chart.  It defines who handles what, how tasks get routed, what happens when something does not match.  It is escalation logic:  when one path fails, where does it go next?
-- skill.md \ teaches model how to do something; supplies the process for doing something.  Think of skills as employees.  Each one has a capability,  Some are specialists, some are generalists.  Some only run on cron.  
-- decisions.md \ why we did what we did, why we chose A over B, etc.  Architecture Decision Records (ADR). provide context, decision, risks, consequences. Document using the [decision layer and biases layer](https://docs.google.com/document/d/1VjtP-jPn-wOpE8z5QSVOdk-pPxneyuDDM6z_a9OIpYY/edit?tab=t.0)
-- soul or personas.md \ who the agent is.  As it may run sub-agents, this document defines the  personas for those sub-agents.
-- there could be many versions of these spec files in each spec folder area.  
-- consider filing rules - what goes where when it gets recorded.  
+- many docs could be in these folders 
+- decisions.md \ be sure to always have this.  Why we did what we did, why we chose A over B, etc.  Architecture Decision Records (ADR). provide context, decision, risks, consequences. Document using the [decision layer and biases layer](https://docs.google.com/document/d/1VjtP-jPn-wOpE8z5QSVOdk-pPxneyuDDM6z_a9OIpYY/edit?tab=t.0)
 
-#### 3-Layer Classification System for "Agents"
-
-1. Execution Units is something that does work:  py script, cron job, API call, function
-2. Service Layer is a reusable unit that performs a defined function: 
-3. An agent is a system that decides what to do next.  It is the harness that calls a LLM model to help apply judgement and reasoning about what to do next.  
-- It does not have to call an LLM - it could be a rules-based decision tree or a predefine flow. We could call this an automation orchestrator.  
-- And if judgement and reasoning are required, we can call this an LLM orchestrator, because now it calls for an LLM.  
 
 ###### 1_strategy_s
 
@@ -114,10 +105,29 @@ Skills scale intelligence and adapt automatically as models improve. When the mo
 ###### 7_sales-distribution_s
 
 ###### 8_support_s
- 
-##### tasks
 
-*task/project items in separate documents* 
+ 
+##### tasks-workflows
+
+###### Workflows And Agents 
+
+Let's define these.  
+
+1. Execution Units is something that does work:  py script, cron job, API call, function
+2. Service Layer is a reusable unit that performs a defined function: 
+3. An agent is a system that decides what to do next.  It is the harness that calls a LLM model to help apply judgement and reasoning about what to do next.  
+- It does not have to call an LLM - it could be a rules-based decision tree or a predefined flow. We could call this an automation controler.  
+- And if judgement and reasoning are required, we can call this an LLM controler, because now it calls for an LLM.  
+
+For me, a project (this repo) could encompass many agents, and agents are either automation controlers or LLM controlers, comprised of service layers (which could on their own can call an LLM), built by execution units.  An agent is a workflow, and workflows can be completed by agents or humans or a mix of both. 
+
+Starting from the top, I have projects (this repo as template), workflows in the project, agents in workflows and orchestrators (humans) in workflows.  And workflows can include LLM conmtrolers or automation controlers, comprised of service layers, built by execution units. 
+
+Workflows repeat, and tasks can repeat but would be defined as one-time executions for purposes of this repo.  
+
+How to build Agents.  That is another process I am building and will update here in future. [Closed link for now](https://docs.google.com/document/d/1YH9-8RATyseuqbhBy9qBdhG_pIc88yt3ePokT8eyRkk/edit?tab=t.0)  
+
+*tasks items in separate documents* 
 
 date_build-plan.md \ sequences, tasks, modules, dependencies, components
 
@@ -183,4 +193,6 @@ date_build-plan.md \ sequences, tasks, modules, dependencies, components
 - acceptance-tests.md \
 - qa-checklists.md \
 - dev-tests/
+
+
 
