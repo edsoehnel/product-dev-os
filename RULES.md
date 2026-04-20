@@ -18,6 +18,25 @@ Dump in rules that I come across - could be anything, specific or general.
 14. Feed AI agents currated context that provides the right info without overwhelming them.
 15. Repos might contain contradictory information.  AI agents will flag that and ask before proceeding to get clarification.
 
+# Dev. Vs Production
+
+All projects worked on and tested in dev VM,  then pushed to producton via Git.  
+
+1. Dev work
+- build features
+- test
+2. Push to GitHub
+- commit
+- push
+3. Deploy to prod
+- git pull
+- restart
+4. Validate
+5. Tag release
+- v1.2.0
+
+Or, create branch, spin up VM and work on it, test, open PR, merge to main.  
+
 # AI Processes
 
 0. Prep: Cleans the working tree by analyzing any uncommitted work and doing the right thing with it (stash or commit). Also runs the entire current test suite and fixes any failures it encounters.
