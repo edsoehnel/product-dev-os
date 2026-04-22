@@ -122,7 +122,11 @@
 
 [Browser Harness](#browser-harness)
 
-# 
+---
+
+This doc is a list I maintain of anything interesting to me that I find 
+
+---
 
 # **Trace models response back to exact docs** 
 
