@@ -1,3 +1,117 @@
+# Laws of Engineering
+
+via https://lawsofsoftwareengineering.com/
+
+Amdahl’s Law — The maximum performance improvement of a system is constrained by the portion that cannot be parallelized.
+
+Beck’s Law — Optimism is an occupational hazard of programming, and feedback is the treatment.
+
+Benford’s Law — In many real-world datasets, lower digits appear more frequently as leading digits.
+
+Betteridge’s Law of Headlines — Any headline that ends in a question mark can usually be answered “no.”
+
+Brooks’s Law — Adding manpower to a late software project makes it later.
+
+Chesterton’s Fence — Do not remove a system or feature until you understand why it exists.
+
+Conway’s Law — System design reflects the communication structure of the organization that built it.
+
+Cunningham’s Law — The best way to get the right answer online is to post the wrong one.
+
+Dijkstra’s Law — Program testing can show the presence of bugs, not their absence.
+
+Eagleson’s Law — Any code you write will eventually be maintained by someone less experienced than you.
+
+Gall’s Law — A working complex system evolves from a working simple system.
+
+Gilb’s Law — Anything you need to quantify can be measured in a way that is superior to not measuring it at all.
+
+Goodhart’s Law — When a measure becomes a target, it ceases to be a good measure.
+
+Greenspun’s Tenth Rule — Any sufficiently complex program contains an ad hoc implementation of Lisp.
+
+Hick’s Law — Decision time increases with the number and complexity of choices.
+
+Hofstadter’s Law — It always takes longer than expected, even when accounting for this.
+
+Hyrum’s Law — All observable behaviors of a system will be depended on by someone.
+
+Ivory Tower Law — Theoretical designs often fail when applied to real-world constraints.
+
+Kernighan’s Law — Debugging is harder than writing code, so overly clever code is risky.
+
+Knuth’s Optimization Principle — Premature optimization is the root of most inefficiency.
+
+KISS Principle — Simplicity should be a key design goal in systems.
+Law of Demeter — Components should only interact with their immediate neighbors.
+
+Leaky Abstractions — All non-trivial abstractions eventually expose underlying complexities.
+
+Lehman’s Laws — Software must continuously evolve or it becomes less useful over time.
+
+Linus’s Law — Given enough reviewers, all bugs become easier to find.
+
+Liskov Substitution Principle — Subtypes must be usable in place of their base types without altering correctness.
+
+Murphy’s Law — Anything that can go wrong will go wrong.
+Occam’s Razor — The simplest explanation or solution is usually best.
+
+Parkinson’s Law — Work expands to fill the available time.
+
+Pareto Principle — A small number of causes often produce the majority of effects.
+
+Peter Principle — People are promoted until they reach their level of incompetence.
+
+Postel’s Law — Be strict in what you send and tolerant in what you accept.
+
+Reed’s Law — The value of a network grows exponentially with the number of possible subgroups.
+
+Schelling Point — People tend to coordinate around obvious focal points without communication.
+
+Second-System Effect — Engineers overcomplicate systems when designing their second attempt.
+
+Shirky Principle — Institutions try to preserve problems to maintain their relevance.
+
+Tesler’s Law — Every application has an irreducible amount of inherent complexity.
+
+The Law of the Instrument — If all you have is a hammer, everything looks like a nail.
+
+The Unix Philosophy — Build simple, modular tools that do one thing well.
+
+Wadler’s Law — Developers disproportionately focus on minor syntax issues over important architecture concerns.
+
+Wirth’s Law — Software slows down more quickly than hardware speeds up.
+
+Zawinski’s Law — Every program attempts to expand until it can read email.
+
+Atwood’s Law — Any application that can be written in JavaScript will eventually be written in JavaScript.
+
+Bell’s Law of Computer Classes — New computer classes emerge as technology advances and costs decrease.
+
+Brandolini’s Law — Refuting misinformation takes significantly more effort than creating it.
+
+Campbell’s Law — Metrics used for decision-making become corrupted and distort processes.
+
+Clarke’s Third Law — Advanced technology is indistinguishable from magic.
+
+Gallagher’s Law — Inefficiencies grow unnoticed until they become critical problems.
+
+Gresham’s Law (applied) — Lower-quality practices tend to drive out higher-quality ones if unchecked.
+
+Hanlon’s Razor — Do not attribute to malice what can be explained by incompetence.
+
+Metcalfe’s Law — The value of a network grows proportionally to the square of its users.
+
+Moore’s Law — The number of transistors on a chip doubles roughly every two years.
+
+Ninety-Ninety Rule — The final 10% of a project takes another 90% of the time.
+
+Sturgeon’s Law — Ninety percent of everything is of low quality.
+
+The Law of Large Numbers (applied) — Outcomes become more predictable as the number of trials increases.
+
+Zipf’s Law — In many systems, a few items are extremely common while most are rare.
+
 # Project Rules
 
 Dump in rules that I come across - could be anything, specific or general.  
